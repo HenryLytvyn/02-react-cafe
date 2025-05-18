@@ -8,24 +8,24 @@ import type { Votes, VoteType } from "../../types/votes";
 
 import css from "./App.module.css";
 
-const votes: Votes = {
+const initialVotes: Votes = {
   good: 0,
   neutral: 0,
   bad: 0,
 };
 
 export default function App() {
-  const [values, setVelues] = useState<Votes>(votes);
+  const [values, setValues] = useState<Votes>(initialVotes);
 
   const handleVote = (type: VoteType) => {
-    setVelues({
+    setValues({
       ...values,
       [type]: values[type] + 1,
     });
   };
 
   const resetVotes = () => {
-    setVelues({
+    setValues({
       good: 0,
       neutral: 0,
       bad: 0,

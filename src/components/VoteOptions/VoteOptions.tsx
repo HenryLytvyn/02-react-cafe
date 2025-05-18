@@ -14,13 +14,28 @@ export default function VoteOptions({
 }: VoteOptionsProps) {
   return (
     <div className={css.container}>
-      <button onClick={() => onVote("good")} className={css.button}>
+      <button
+        onClick={() => onVote("good")}
+        className={css.button}
+        type="button"
+        aria-label="rate as good"
+      >
         Good
       </button>
-      <button onClick={() => onVote("neutral")} className={css.button}>
+      <button
+        onClick={() => onVote("neutral")}
+        className={css.button}
+        type="button"
+        aria-label="rate as neutral"
+      >
         Neutral
       </button>
-      <button onClick={() => onVote("bad")} className={css.button}>
+      <button
+        onClick={() => onVote("bad")}
+        className={css.button}
+        type="button"
+        aria-label="rate as bad"
+      >
         Bad
       </button>
       {canReset && (
